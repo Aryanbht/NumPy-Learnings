@@ -81,13 +81,58 @@ import numpy as np
 
 # score[score < 30] = 0
 # print(score)
+#*Broadcasting 
+#! We can Broadcast Two arrays when checking from left two right no. are same or one of them is one. 
+# arr1 =  np.array([[1,2,3,4]])
+# arr2 = np.array([[1],[2],[3],[4]])
+
+# print(arr1.shape)
+# print(arr2.shape)
+
+# print(arr1 * arr2)
+
+#*Aggregate Function
+
+# array = np.array([[1,2,3,4,5],
+#                   [6,7,8,9,10]]) 
+
+# print(np.sum(array))
+# print(np.mean(array))
+# print(np.std(array))
+# print(np.var(array))
+# print(np.min(array))
+# print(np.max(array))
+# print(np.argmin(array))
+# print(np.sum(array , axis = 0))
+# print(np.sum(array , axis = 1))
+
+#*Filtering 
 
 
+# ages = np.array([[5,6,4,32,78],
+#                 [9,3,54,21,56]])
+
+# teens = ages[ages < 18]
+# adults = ages[(ages >= 18) & (ages <=65) ]
+# print(teens)
+# print(adults)
+
+# adult = np.where(ages > 18 , ages , "-")
+# print(adult)
+
+#*Random Numbers 
+
+# rng = np.random.default_rng()
+
+# print(rng.integers(low = 0 , high = 100 , size = (3,2,3)))
+# np.random.seed(seed=1)
+# print(np.random.uniform(low= -1 , high = 2 , size=(3,2)))
 
 
-
-
-
-
-
+# rng = np.random.default_rng()
+# arr = np.array([2,3,8,9])
+# rng.shuffle(arr)
+# print(arr)
+# arr1 = rng.choice(arr , 3)
+# print(arr1)
 
