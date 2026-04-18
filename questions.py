@@ -142,3 +142,75 @@ import numpy as np
 # z = np.ones((5,3)) @ np.ones((3,2))
 # print(z)
 
+#### 25. Given a 1D array, negate all elements which are between 3 and 8, in place
+
+# z = np.random.uniform(0 , 10 , 10)
+# print(z)
+# z[(z > 3) & (z < 8)] *= -1
+# print("Modified:", z)
+# z1 = z[((z < 3) | (z > 8))]
+# print(z1)
+
+#### 29. How to round away from zero a float array ?
+
+# z = np.random.random(4)*10
+# rounded = np.copysign(np.ceil(np.abs(z)),z)
+# print(rounded)
+
+#### 30. How to find common values between two arrays?
+
+# z1 = np.random.randint(0,10,10)
+# z2 = np.random.randint(0,10,10)
+# print(z1)
+# print(z2)
+# common = np.intersect1d(z1,z2)
+# print(common)
+
+#### 33. How to get the dates of yesterday, today and tomorrow?
+
+# yes = np.datetime64('today') - np.timedelta64(1)
+# tod = np.datetime64('today')
+# tom = np.datetime64('today') + np.timedelta64(1)
+
+# print(yes)
+# print(tod)
+# print(tom)
+
+
+#### 34. How to get all the dates corresponding to the month of July 2016? 
+
+# z = np.arange("2016-07" , "2016-08" , dtype= 'datetime64[D]')
+
+# print(z)
+
+#### 35. How to compute ((A+B)*(-A/2)) in place (without copy)? 
+
+# A = np.ones(3)
+# B = np.ones(3)*2
+
+# np.add(A,B ,out=B)
+# np.divide(A , 2 , out= A)
+# np.negative(A , out = A)
+# np.multiply(A , B , out = A)
+
+# print(A)
+
+#### 37. Create a 5x5 matrix with row values ranging from 0 to 4 
+
+# z = np.zeros((5,5))
+# z += np.arange(5)
+# print(z)
+
+
+#### 37. Create a 5x5 matrix with row values ranging from 0 to 4 
+
+
+# Z = np.linspace(0,1,11,endpoint=False)[1:]
+# print(Z)
+
+
+#### 40. Create a random vector of size 10 and sort it
+
+# z = np.random.random(10)
+# z.sort()
+# print(z)
